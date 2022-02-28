@@ -1,3 +1,11 @@
+.carcContainer{
+  background-color: rgb(47, 87, 47); 
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+
 .header {
   font-size: 20px;
   font-family: random($limit: 10);
@@ -15,7 +23,7 @@
 }
 .search_input {
   height: 14px;
-  width: 490px;
+  width: 500px;
   outline: none;
   border: none;
 }
@@ -27,22 +35,21 @@
   color: #5f6368;
   border: none;
 }
-.example-card {
-  display: flex;
-  flex-direction: column;
+
+.example-card{
   height: fit-content;
+  flex-wrap: wrap;
+  align-content: flex-start;
   width: 180px;
-  min-height: 250px;
-  padding: 16px 13px 0px;
-  box-shadow: 0 2px 1px -1px rgba(0,0,0,1), 
-              0 1px 1px 0 rgba(0,0,0,1), 
-              0 1px 3px 0 rgba(0,0,0,1);
+  background-color: whitesmoke;
   border-radius: 9px;
-  border-width: 1px;
-  margin-bottom: 25px;
-  background-color: #ededed ;
+  min-height: 250px;
 }
 
+.example-card:hover{
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, 
+                          rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
 
 .matcardtitle {
   letter-spacing: 0.00625em;
@@ -123,4 +130,8 @@ margin-top: 20px;
 }
 .example-spacer{
     flex:  1 1 auto;
+}
+.addButton{
+  margin-left: 15%;
+  color: rgb(47, 87, 47);
 }

@@ -1,13 +1,11 @@
-<mat-card
-    style="background-color: grey; margin-left: auto;margin-right: auto;display: flex;justify-content: center;">
+<mat-card class="carcContainer">
 
-    <div fxLayout="row" fxLayoutAlign="start center">
+    <mat-toolbar fxLayout="row" fxLayoutAlign="start center">
         <h1 class="header">Employees</h1>
         
-        <div class="search_bar" [ngStyle.xs]="{'margin-left.px': 10}">
+        <div class="search_bar">
             <div class="search_bar">
-
-                <input type="text" placeholder="Search..." class="search_input" [ngStyle.xs]="{'width.px': 10}"
+                <input type="text" placeholder="Search..." class="search_input"
                     [(ngModel)]="value">
                 <button class="crossbutton" *ngIf="value" matSuffix mat-icon-button aria-label="Clear"
                     (click)="value=''">
@@ -15,12 +13,11 @@
                 </button>
             </div>
         </div>
-        <button (click)="onadd()" style="margin-left: 50px;"> ADD Employee</button>
-    </div>
+        <button class="addButton" (click)="onadd()" mat-stroked-button>Add Employee</button>
+    </mat-toolbar>
 </mat-card>
 
-<div
-    style="display: flex;flex-wrap:wrap;gap:15px;flex-direction: row;justify-content: start;margin-left: 100px;margin-top: 50px;position: relative;" >
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" style="margin: 20px;">
 
     <mat-card class="example-card " *ngFor="let emp of employee$ | async">
 
@@ -30,13 +27,13 @@
         <mat-menu #menu="matMenu">
             <button mat-menu-item>
                 <mat-icon (click)="openDialog(emp)">edit</mat-icon>
-              
+                <span>Update</span>
             </button>
+
             <button  mat-menu-item >
-                <mat-icon (click)="ondel(emp.id)" >delete</mat-icon>
-                
+                <mat-icon (click)="ondel(emp.id)">delete</mat-icon> 
+                <span>Delete</span>
             </button>
-            
         </mat-menu>
         <div>
 

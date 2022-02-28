@@ -9,13 +9,16 @@
     0 1px 1px 0 rgba(0,0,0,1), 
     0 1px 3px 0 rgba(0,0,0,1);
 }
+.names{
+  background-color: lightgray;
+}
 .h1 {
     width: 290px;
     height: 37px;
     text-align: left;
     font: normal normal bold 25px/37px Roboto;
     letter-spacing: 0px;
-    color: #42515f;
+    color: rgb(47, 87, 47);
     text-transform: capitalize;
     opacity: 1;
 }
@@ -66,15 +69,9 @@
   .example-spacer {
     flex: 0.8 0.8 auto;
 }
-.bottombuttons{
-    background: #E2E2E2 0% 0% no-repeat padding-box;
-    border: 1px solid #969696;
-    border-radius: 5px;
-    opacity: 1;
-    border-radius: 5px;
-    width: 100px;
-    height: 30px;
-}
-.bottombuttons:hover{
-    background: #707070 0% 0% no-repeat padding-box;
+
+.primary{
+  color: rgb(47, 87, 47);
+  background-color: whitesmoke;
+  width: 130px;
 }

@@ -1,13 +1,12 @@
 import { createReducer, on } from "@ngrx/store";
 import { Employee } from "./../../model/employees.model";
-import { addEmployee,  addEmployeeSuccess,  deleteEmployeeSuccess,  loadpost,  loadpostSuccess, updateEmployeeSuccess } from "./employees.actions";
+import { addEmployeeSuccess,  deleteEmployeeSuccess,loadpostSuccess, updateEmployeeSuccess } from "./employees.actions";
 
 export interface EmployeeState {
-    employees: ReadonlyArray<Employee>;
+  employees: ReadonlyArray<Employee>;
 }
 
-export const initialState: ReadonlyArray<Employee> =[]   
-;
+export const initialState: ReadonlyArray<Employee> =[];
 
 const _postsReducer = createReducer(initialState,
     on(addEmployeeSuccess, (state, {employees}) =>  [...state, employees]   

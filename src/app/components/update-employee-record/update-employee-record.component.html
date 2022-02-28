@@ -1,11 +1,12 @@
-<form [formGroup]="UpdateForm" fxLayout="column" fxLayoutGap="0px">
+<form [formGroup]="UpdateForm" fxLayout="column">
 
     <div>
         <span>EmployeeName</span>
         <div>
-            <mat-form-field width="600px" appearance="outline">
+            <mat-form-field appearance="outline">
+                <mat-label>EmployeeName</mat-label>
                 <input matInput [(ngModel)]="fullName" formControlName="fullName">
-                <mat-error>bookname Required!</mat-error>
+                <mat-error>Full name Required!</mat-error>
             </mat-form-field>
         </div>
     </div>
@@ -13,61 +14,53 @@
     <div>
         <span>profilePic</span>
         <div>
-            <mat-form-field width="600px" appearance="outline">
+            <mat-form-field appearance="outline">
                 <input matInput [(ngModel)]="profilePic" formControlName="profilePic">
-                <mat-error>bookname Required!</mat-error>
+                <mat-error>Profile pic Required!</mat-error>
             </mat-form-field>
         </div>
     </div>
-    
 
     <div>
         <span>Gender</span>
         <div>
-            <mat-form-field width="600px" appearance="outline">
+            <mat-form-field appearance="outline">
                 <input matInput [(ngModel)]="gender" formControlName="gender">
-                <mat-error>bookname Required!</mat-error>
+                <mat-error>gender Required!</mat-error>
             </mat-form-field>
         </div>
     </div>
-
-    
 
     <div>
         <span>Salary</span>
         <div>
-            <mat-form-field width="600px" appearance="outline">
+            <mat-form-field appearance="outline">
                 <input matInput [(ngModel)]="salary" formControlName="salary">
-                <mat-error>bookname Required!</mat-error>
+                <mat-error>Salary Required!</mat-error>
             </mat-form-field>
         </div>
     </div>
-
-    
 
     <div>
         <span>Note</span>
         <div>
-            <mat-form-field width="600px" appearance="outline">
+            <mat-form-field appearance="outline">
                 <input matInput [(ngModel)]="note" formControlName="note">
-                <mat-error>bookname Required!</mat-error>
+                <mat-error>Note Required!</mat-error>
             </mat-form-field>
         </div>
     </div>
 
-    
-
     <div>
         <span>Department</span>
         <div >
-            <mat-form-field width="600px" appearance="outline" >
+            <mat-form-field appearance="outline" >
                 <input matInput [(ngModel)]="department" formControlName="department">
-                <mat-error></mat-error>
+                <mat-error>Department required!</mat-error>
             </mat-form-field>
         </div>
     </div>
 
     <button (click)="onupdate()">update</button>
-
 
 </form>
